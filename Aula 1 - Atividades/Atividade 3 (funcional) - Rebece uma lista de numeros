@@ -1,0 +1,14 @@
+function mediaNumerosImpares(lista) {
+  const numerosImpares = lista.filter(numero => numero % 2 !== 0);
+  
+  if (numerosImpares.length === 0) {
+    return 0; 
+  }
+
+  const somaImpares = numerosImpares.reduce((acc, curr) => acc + curr, 0);
+  const media = somaImpares / numerosImpares.length;
+  return media;
+}
+
+const numeros = [1, 2, 3, 4, 5, 6];
+console.log(mediaNumerosImpares(numeros)); 
